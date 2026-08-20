@@ -6,21 +6,25 @@ export class UsersService {
     {
       id: '21',
       name: 'Jhon',
+      email: 'jhon@gmial.com',
       age: 34,
     },
     {
       id: '22',
       name: 'Doe',
+      email: 'doe@gmial.com',
       age: 32,
     },
     {
       id: '23',
       name: 'Lee',
+      email: 'lee@gmial.com',
       age: 29,
     },
     {
       id: '24',
       name: 'Sem',
+      email: 'sem@gmial.com',
       age: 21,
     },
   ];
@@ -28,6 +32,7 @@ export class UsersService {
   getUsers(): {
     id: string;
     name: string;
+    email: string;
     age: number;
   }[] {
     return this.users;

@@ -10,23 +10,14 @@ import {
   Query,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
-
-class CreateUserDto {
-  id!: string;
-  name!: string;
-  age: number;
-}
+import { CreateUserDto } from './dto/create-user.dto/create-user.dto';
 
 @Controller('users')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
   @Get()
-  getUsers(): {
-    id: string;
-    name: string;
-    age: number;
-  }[] {
+  getUsers(): CreateUserDto[] {
     return this.usersService.getUsers();
   }
 
