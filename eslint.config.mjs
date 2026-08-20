@@ -10,7 +10,7 @@ export default tseslint.config(
   },
   eslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
-  eslintPluginPrettierRecommended,
+  eslintPluginPrettierRecommended, // все эти пробелы и отступы итд итд
   {
     languageOptions: {
       globals: {
@@ -29,6 +29,7 @@ export default tseslint.config(
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-floating-promises': 'warn',
       '@typescript-eslint/no-unsafe-argument': 'warn',
+      // '@typescript-eslint/no-unsafe-member-access': 'off',
       "prettier/prettier": ["error", { endOfLine: "auto" }],
     },
   },
